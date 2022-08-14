@@ -31,8 +31,8 @@ Posts
                 полям объекта модели. Например, здесь мы выводим имя,
                 в следующем столбце описание, и т.д.  -->
                <td>{{ post.title }}</td>
-               <td>{{ post.dateCreation }}</td>
-               <td>{{ post.text|mat }}</td>
+               <td>{{ post.dateCreation|date:'d.m.y' }}</td>
+               <td>{{ post.text|mat|truncatechars:20 }}</td>
                <td>{{ post.author }}</td>
            </tr>
            {% endfor %}
